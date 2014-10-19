@@ -1,0 +1,16 @@
+A dirty c program to quickly munge a postgres 9.3 plain sql dump so that it can be loaded into postgres 8.2
+
+For more information see [http://segfault.net.nz/posts/2014-10-19-postgres-replication-93-to-82.html]
+
+Compile:
+
+    make
+
+Run:
+    ./munge_pg_93_to_82 path_to_pg_93_plain_sql_dump.sql
+
+and then continue loading your pg dump as per usual
+
+    psql -h foo -U bar -d baz -f path_to_pg_93_plain_sql_dump.sql
+
+
