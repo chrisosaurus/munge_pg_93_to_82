@@ -14,3 +14,9 @@ and then continue loading your pg dump as per usual
     psql -h foo -U bar -d baz -f path_to_pg_93_plain_sql_dump.sql
 
 
+---
+
+Known issues:
+
+* It is possible for munge_pg_93_to_82 to successfully modify the first line, and then fail to modify the second, leaving the edited file half-done. It is trivial to changing the order of the read/writes to reduce the changes of this occuring.
+
