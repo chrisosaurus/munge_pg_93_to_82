@@ -18,9 +18,9 @@ int main(int argc, char **argv){
     char read[100];
 
     // Replace line
-    //      SET lock_timeout = 0;$
+    //      SET lock_timeout = 0;
     // With
-    //      --T lock_timeout = 0;$
+    //      --T lock_timeout = 0;
     if( fseek(f, 62, SEEK_SET) ){
         printf("First seek failed\n");
         exit(1);
